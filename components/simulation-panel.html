@@ -1,0 +1,60 @@
+<section id="algorithms" class="simulation-section mt-4">
+    <div class="glass-panel glow-cyan p-4">
+        <h3 class="section-title"><span class="text-cyan">01.</span> WORKLOAD CONFIGURATION</h3>
+        
+        <div class="controls-grid">
+            <div class="control-group">
+                <label>ALGORITHM</label>
+                <select id="algo-select" class="neon-select" style="font-family: var(--font-heading); font-size: 0.8rem; background: rgba(10, 14, 23, 0.9);">
+                    <optgroup label="ML Enhanced Scheduling" style="background: var(--void-bg); color: var(--void-purple);">
+                        <option value="ML-SJF" selected>ML-SJF Intelligent Scheduler</option>
+                        <option value="ML-RR">ML-RR Adaptive Quantum Scheduler</option>
+                        <option value="Adaptive">Adaptive Scheduler</option>
+                        <option value="AI-Burst">AI Burst Prediction Engine</option>
+                    </optgroup>
+                    <optgroup label="Traditional Scheduling" style="background: var(--void-bg); color: var(--text-muted);">
+                        <option value="FCFS">FCFS (First Come First Served)</option>
+                        <option value="SJF">SJF (Shortest Job First)</option>
+                        <option value="SRTF">SRTF (Shortest Remaining Time First)</option>
+                        <option value="RR">Round Robin (RR)</option>
+                        <option value="Priority">Priority Scheduling</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="control-group" id="tq-group" style="display: none;">
+                <label>TIME QUANTUM</label>
+                <input type="number" id="time-quantum" class="neon-input" value="4" min="1">
+            </div>
+            <div class="control-actions">
+                <button id="btn-add-process" class="btn btn-outline">+ ADD PROCESS</button>
+                <button id="btn-generate-workload" class="btn btn-outline">RANDOM WORKLOAD</button>
+                <button id="btn-run-simulation" class="btn btn-neon">EXECUTE SEQUENCE</button>
+            </div>
+        </div>
+
+        <!-- Premium Workload Presets -->
+        <div class="preset-actions mt-4" style="display: flex; gap: 1rem; align-items: center; padding-top: 1rem; border-top: 1px solid var(--void-border); flex-wrap: wrap;">
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">STRESS TESTS:</span>
+            <button id="btn-preset-convoy" class="btn" style="background: rgba(255, 51, 102, 0.1); border: 1px solid rgba(255, 51, 102, 0.5); color: #ff3366; font-size: 0.7rem; padding: 0.5rem 1rem;">THE CONVOY TRAP</button>
+            <button id="btn-preset-pulse" class="btn" style="background: rgba(0, 243, 255, 0.1); border: 1px solid rgba(0, 243, 255, 0.5); color: var(--neon-cyan); font-size: 0.7rem; padding: 0.5rem 1rem;">THE PULSE</button>
+            <button id="btn-preset-chaos" class="btn" style="background: rgba(157, 0, 255, 0.1); border: 1px solid rgba(157, 0, 255, 0.5); color: var(--neon-purple); font-size: 0.7rem; padding: 0.5rem 1rem;">CHAOS MODE</button>
+        </div>
+
+        <section id="simulator" class="process-table-container mt-4">
+            <table class="neon-table" id="process-table">
+                <thead>
+                    <tr>
+                        <th>PID</th>
+                        <th>ARRIVAL TIME</th>
+                        <th>BURST TIME</th>
+                        <th>PRIORITY</th>
+                        <th>ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody id="process-tbody">
+                    <!-- Processes injected via JS -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+</section>

@@ -1,0 +1,40 @@
+<section id="gantt" class="gantt-section mt-4">
+    <div class="glass-panel glow-purple p-4">
+        <h3 class="section-title"><span class="text-purple">02.</span> EXECUTION TIMELINE (GANTT)</h3>
+        
+        <div class="gantt-container" id="gantt-chart">
+            <div class="gantt-placeholder">AWAITING SIMULATION DATA...</div>
+        </div>
+        
+        <div class="metrics-grid mt-4" id="simulation-metrics" style="display:none;">
+            <div class="metric-box">
+                <div class="metric-label">AVG WAITING TIME</div>
+                <div class="metric-value text-cyan" id="avg-wt">0.00 ms</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-label">AVG TURNAROUND TIME</div>
+                <div class="metric-value text-purple" id="avg-tat">0.00 ms</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-label">CPU UTILIZATION</div>
+                <div class="metric-value text-cyan" id="cpu-util">0%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terminal Component -->
+    <div class="terminal-container mt-4 glass-panel" id="system-terminal">
+        <div class="terminal-header">
+            <div class="terminal-title">SYSTEM_TERMINAL_V2.4</div>
+            <div class="terminal-controls">
+                <span class="ctrl-btn minimize" id="term-minimize">_</span>
+                <span class="ctrl-btn maximize">□</span>
+                <span class="ctrl-btn close">×</span>
+            </div>
+        </div>
+        <div class="terminal-body" id="terminal-output">
+            <div class="term-line">> Terminal initialized.</div>
+            <div class="term-line">> Awaiting API connections...</div>
+        </div>
+    </div>
+</section>

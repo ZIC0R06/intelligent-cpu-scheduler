@@ -1,0 +1,30 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+
+# Node (if you add frontend later)
+node_modules/
+
+# Build / temp
+dist/
+build/
+
+# Jupyter (if used)
+.ipynb_checkpoints/

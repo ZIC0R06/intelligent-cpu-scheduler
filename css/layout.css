@@ -1,0 +1,57 @@
+/* Global Layout */
+.app-container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+/* Ensure smooth scrolling offset for sticky navbar */
+section {
+    scroll-margin-top: calc(var(--nav-height, 80px) + 2rem);
+}
+
+/* Background Systems */
+.mesh-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-image: 
+        radial-gradient(circle at 15% 50%, rgba(0, 243, 255, 0.05), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(157, 0, 255, 0.05), transparent 25%);
+    background-size: cover;
+    pointer-events: none;
+}
+
+/* Hero Grid */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    min-height: calc(100vh - var(--nav-height) - 100px);
+    align-items: center;
+    margin-top: 4rem;
+}
+
+@media (max-width: 1024px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        margin-top: 3rem;
+    }
+}

@@ -1,0 +1,37 @@
+<section id="insights" class="ml-insights-section mt-4" style="margin-bottom: 2rem;">
+    <div class="glass-panel glow-cyan p-4">
+        <h3 class="section-title"><span class="text-cyan">05.</span> MACHINE LEARNING INSIGHTS</h3>
+        
+        <!-- Neural Map Visualization -->
+        <div class="neural-map-container mt-4 mb-4" style="position: relative; width: 100%; height: 180px; background: rgba(0,0,0,0.4); border-radius: var(--border-radius-sm); border: 1px solid var(--neon-cyan-dim); overflow: hidden;">
+            <div style="position: absolute; top: 0.5rem; left: 1rem; font-family: var(--font-heading); font-size: 0.8rem; color: var(--neon-cyan); letter-spacing: 1px; z-index: 10;">
+                NEURO-SYNC BRAIN VISUALIZATION
+            </div>
+            <canvas id="neural-map" style="width: 100%; height: 100%;"></canvas>
+        </div>
+
+        <div class="charts-grid" style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+            <div class="chart-container" style="position: relative; height: 350px; width: 100%;">
+                <canvas id="featureImportanceChart"></canvas>
+            </div>
+            <div class="anomaly-panel p-4" style="background: rgba(0,0,0,0.4); border-radius: var(--border-radius-sm); border: 1px solid var(--void-border);">
+                <h4 style="color: var(--neon-cyan); font-family: var(--font-heading); margin-bottom: 1rem;">ANOMALY DETECTION</h4>
+                <div id="anomaly-log" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); max-height: 280px; overflow-y: auto;">
+                    <div class="anomaly-item" style="border-left: 2px solid #ff3366; padding-left: 0.5rem; margin-bottom: 0.5rem;">
+                        <span style="color: #ff3366;">[WARN]</span> PID 4: Burst Time Outlier (Z-Score: 3.4)
+                    </div>
+                    <div class="anomaly-item" style="border-left: 2px solid #ffcc00; padding-left: 0.5rem; margin-bottom: 0.5rem;">
+                        <span style="color: #ffcc00;">[INFO]</span> Sudden workload spike detected. Recalibrating weights.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+@media (max-width: 1024px) {
+    #ml-insights .charts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>

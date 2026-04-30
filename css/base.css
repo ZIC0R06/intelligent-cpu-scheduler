@@ -1,0 +1,89 @@
+:root {
+    /* Color Palette */
+    --void-bg: #030508;
+    --void-panel: rgba(10, 14, 23, 0.6);
+    --void-border: rgba(45, 55, 72, 0.4);
+    
+    --neon-cyan: #00f3ff;
+    --neon-cyan-glow: rgba(0, 243, 255, 0.4);
+    --neon-cyan-dim: rgba(0, 243, 255, 0.1);
+    
+    --void-purple: #9d00ff;
+    --void-purple-glow: rgba(157, 0, 255, 0.4);
+    --void-purple-dim: rgba(157, 0, 255, 0.1);
+    
+    --text-main: #e2e8f0;
+    --text-muted: #a0aec0;
+    --text-dark: #1a202c;
+
+    /* Typography */
+    --font-heading: 'Orbitron', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-body: 'Outfit', sans-serif;
+    
+    /* Layout */
+    --nav-height: 80px;
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+    
+    /* Transitions */
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--void-bg);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(45, 55, 72, 0.8);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--neon-cyan);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--void-bg);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.text-cyan { color: var(--neon-cyan); }
+.text-purple { color: var(--void-purple); }
+.text-gradient {
+    background: linear-gradient(90deg, var(--neon-cyan), var(--void-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
